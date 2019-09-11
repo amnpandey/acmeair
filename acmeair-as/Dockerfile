@@ -8,7 +8,7 @@ ADD server.xml /opt/ibm/wlp/usr/servers/defaultServer/server.xml
 RUN installUtility install --acceptLicense defaultServer
 RUN rm -rf /opt/ibm/wlp/usr/servers/defaultServer/workarea
 
-ADD ./build/libs/*.war /opt/ibm/wlp/usr/servers/defaultServer/apps
+COPY ./build/libs/*.war /opt/ibm/wlp/usr/servers/defaultServer/apps
 
 EXPOSE 80
 
